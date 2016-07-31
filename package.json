@@ -1,0 +1,23 @@
+{
+  "name": "EggheadChien.ReactJS.package",
+  "version": "1.0.0",
+  "description": "Practice on ReactJS. This is a file after type 'npm init'.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://EggheadChien@github.com/EggheadChien/ReactJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EggheadChien/ReactJS/issues"
+  },
+  "homepage": "https://github.com/EggheadChien/ReactJS#readme",
+  "devDependencies": {
+    "webpack": "^1.13.1"
+  }
+}
