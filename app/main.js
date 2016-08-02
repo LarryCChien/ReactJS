@@ -6,12 +6,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Hello from './component.jsx';
+// import HelloWorld from './helloWorld.jsx';
 
 main();
 
 function main() {
+	var HelloWorld = React.createClass({
+		render: function() {
+			return (
+				<h3>Hello, world!</h3>
+			);
+		}
+	});
 	ReactDOM.render(
 	<div>
 		<Hello />
+		<HelloWorld />
 	</div>, document.getElementById('app'));
 }
