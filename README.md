@@ -1,6 +1,13 @@
 # ReactJS
 Practice on ReactJS
 
+學習筆記：
+20160802
+將練習的index.html及main.js的相關檔案與要做todoList的檔案分開，
+讓index.html就是一個很簡單的React範例。
+考慮要不要將todoList另外開一資料夾或branch來放置。
+
+
 參考網站／影片：
 
 1. 引入文件 | React Webpack 小书

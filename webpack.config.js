@@ -5,11 +5,18 @@ var pathToReactDOM = path.resolve(node_modules, 'react-dom/dist/react-dom.min.js
 
 
 var config = {
-    entry: [
-		path.resolve(__dirname, 'app/main.js'),
-		'webpack/hot/dev-server',
-		'webpack-dev-server/client?http://localhost:9527',
-	],
+    entry: {
+		main: [
+			path.resolve(__dirname, 'app/main.js'),
+			'webpack/hot/dev-server',
+			'webpack-dev-server/client?http://localhost:9527',
+		],
+		todo: [
+			path.resolve(__dirname, 'app/todo.js'),
+			'webpack/hot/dev-server',
+			'webpack-dev-server/client?http://localhost:9527',
+		]
+	},
 	resolve: {
         alias: {
 			'react': pathToReact,
@@ -18,11 +25,11 @@ var config = {
     },
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
     },
 	module: {
 		loaders: [{
-			test: /\.jsx?$/, // 用正則來匹配路徑，這段意思是匹配 js 或者 jsx
+			test: /\.jsx?$/, // 用正則表達式來匹配路徑，這段意思是匹配 js 或者 jsx
 			exclude: /node_modules/,
 			loader: 'babel-loader' // 加載模組 "babel-loader"
 		}, {
