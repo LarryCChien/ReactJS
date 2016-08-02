@@ -38,3 +38,6 @@ http://cn.redux.js.org/
 
 12.GitHub - chentsulin/redux: 繁體中文 redux 文件翻譯：
 https://github.com/chentsulin/redux
+
+13.從TodoList範例學習React(1)-基本架構
+https://dotblogs.com.tw/wellwind/2016/03/13/react-tutorial-5-react-basic-and-todolist-scaffold
