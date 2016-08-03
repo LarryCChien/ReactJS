@@ -5,21 +5,13 @@
 // var component = require('./component.js'); // CommonJS
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TodoItems from './todoItems.jsx';
+import TodoList from './todoList.jsx';
 
 main();
 
 function main() {
-	var HelloTodo = React.createClass({
-		render: function() {
-			return (
-				<h3>Hello, todo!</h3>
-			);
-		}
-	});
 	ReactDOM.render(
 	<div>
-		<TodoItems />
-		<HelloTodo />
-	</div>, document.getElementById('app'));
+		<TodoList />
+	</div>, document.getElementById('content'));
 }

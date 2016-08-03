@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default class Hello extends React.Component {
+export default class TodoItems extends React.Component {
 	render() {
-		return <h1>Hello todo-component!!</h1>;
+		return <div>我是TodoItems</div>;
 	}
 }

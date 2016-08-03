@@ -2,10 +2,7 @@
 Practice on ReactJS
 
 ## 學習筆記：
-20160802
-將練習的index.html及main.js的相關檔案與要做todoList的檔案分開，
-讓index.html就是一個很簡單的React範例。
-考慮要不要將todoList另外開一資料夾或branch來放置。
+見 [LearningNote.md](https://github.com/EggheadChien/ReactJS/blob/master/LearningNote.md)
 
 
 ## 參考網站／影片：
@@ -15,6 +12,7 @@ Practice on ReactJS
 2.[Reactjs.tw 社群小聚 - react/flux 起手式](https://www.youtube.com/watch?v=dYScHs_uOAE)
 
 3.[ECMAScript 6入门](http://es6.ruanyifeng.com/)
+  [React/React Native 的ES5 ES6写法对照表](http://bbs.reactnative.cn/topic/15/react-react-native-%E7%9A%84es5-es6%E5%86%99%E6%B3%95%E5%AF%B9%E7%85%A7%E8%A1%A8)
 
 4.[Reactjs 的 lifecycle « Jame's Blog](http://jamestw.logdown.com/posts/255887-reactjs-lifecycle)
 

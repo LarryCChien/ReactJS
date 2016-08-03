@@ -11,11 +11,10 @@ import Hello from './component.jsx';
 main();
 
 function main() {
+	// React.createClass這樣的寫法是ES5的寫法,ES6會用React.Component
 	var HelloWorld = React.createClass({
 		render: function() {
-			return (
-				<h3>Hello, world!</h3>
-			);
+			return <h3>Hello, world!!!</h3>;
 		}
 	});
 	ReactDOM.render(
