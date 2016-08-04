@@ -33,5 +33,7 @@ Practice on ReactJS
 12.[GitHub - chentsulin/redux: 繁體中文 redux 文件翻譯：](https://github.com/chentsulin/redux)
 
 13.[從TodoList範例學習React(1)-基本架構](https://dotblogs.com.tw/wellwind/2016/03/13/react-tutorial-5-react-basic-and-todolist-scaffold)
+&nbsp;[從TodoList範例學習React(2)-透過實作TodoItems學習props](https://dotblogs.com.tw/wellwind/2016/03/18/react-tutorial-6-props)
+&nbsp;[從TodoList範例學習React(3)-透過實作AddTodoForm學習state](https://dotblogs.com.tw/wellwind/2016/04/03/react-tutorial-7-state)
 
 14.[shiningjason1989/ReactTodosTutorial](https://github.com/shiningjason1989/ReactTodosTutorial)
