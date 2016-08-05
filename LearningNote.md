@@ -18,3 +18,10 @@ return的內容如果是有用到jsx的語法(例如：<TodoItems />)，
 這裡用todoItemkey傳入item.id，接收的todoItem.jsx則用this.props.todoItemkey接值
 也可以傳入item，然後接收的todoItem.jsx改成this.props.todoItemkey.id
 只是一個是傳Object(item)，一個是傳value(item.id)，不知道為什麼不傳Objectm。
+
+##20160805
+在todoItem.jsx接收到的this.props.key，經console.log()印出來之後會發現是undefined
+原因是(在todoItems.jsx用來串接todoItem.jsx的)"key"這個字被視為是React的內定字，
+所以在console之前，key就被React拿來用，且不允許之後被操作。
+[參考資料](http://stackoverflow.com/questions/33661511/reactjs-key-undefined-when-accessed-as-a-prop)
+[參考資料2](https://github.com/facebook/react/issues/2429)
