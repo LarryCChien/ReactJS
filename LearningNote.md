@@ -25,3 +25,11 @@ return的內容如果是有用到jsx的語法(例如：<TodoItems />)，
 所以在console之前，key就被React拿來用，且不允許之後被操作。
 [參考資料](http://stackoverflow.com/questions/33661511/reactjs-key-undefined-when-accessed-as-a-prop)
 [參考資料2](https://github.com/facebook/react/issues/2429)
+
+##20160806
+在[從TodoList範例學習React(3)-透過實作AddTodoForm學習state](https://dotblogs.com.tw/wellwind/2016/04/03/react-tutorial-7-state)中，
+因為寫法是ES5的寫法，此範例是使用ES6的寫法，可以參考
+[React/React Native 的ES5 ES6寫法對照表](http://bbs.reactnative.cn/topic/15/react-react-native-%E7%9A%84es5-es6%E5%86%99%E6%B3%95%E5%AF%B9%E7%85%A7%E8%A1%A8)中，
+搜尋「初始化STATE的方式」，另外可參考這篇[甚麼時候要用super](http://cheng.logdown.com/posts/2016/03/26/683329)，
+以及[super(props)有甚麼用](http://react-china.org/t/super-props/975/5)。
+###以後應該考慮開著對照表寫才對...

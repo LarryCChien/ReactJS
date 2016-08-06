@@ -1,7 +1,38 @@
 import React from 'react';
 
 export default class AddTodoForm extends React.Component {
-	render() {
-		return <div>我用來增加TodoItem</div>;
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			todoText: "QQ"
+		};
+
+		// 在ES6中，沒有自動綁定(Autobinding)this的功能，所以必須用bind自己綁定(this)
+		// 而且不建議在render使用該function時再綁定
+		this.handleTodoChange = this.handleTodoChange.bind(this);
+		this.handleAddTodoItem = this.handleAddTodoItem.bind(this);
 	}
+    handleTodoChange(e) {
+        this.setState({
+			todoText: e.target.value
+		});
+    }
+    handleAddTodoItem(e) {
+        console.log(this.state.todoText);
+        // 如何將資料新增到TodoItems中?
+    }
+    render() {
+		// 如上面所述，在這裡才使用onChange={this.handleTodoChange.bind(this)}
+		// 和onClick={this.handleAddTodoItem.bind(this)}並不是好的寫法
+        return (
+            <div>
+                <input type="text"
+                    value={this.state.todoText}
+                    onChange={this.handleTodoChange}/>
+                <button
+                    onClick={this.handleAddTodoItem}>Add Todo Item</button>
+            </div>
+        );
+    }
 }
