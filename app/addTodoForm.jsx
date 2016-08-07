@@ -19,8 +19,10 @@ export default class AddTodoForm extends React.Component {
 		});
     }
     handleAddTodoItem(e) {
-        console.log(this.state.todoText);
+        // console.log(this.state.todoText);
         // 如何將資料新增到TodoItems中?
+		// 呼叫以props傳進來的addItem
+		this.props.addItem(this.state.todoText);
     }
     render() {
 		// 如上面所述，在這裡才使用onChange={this.handleTodoChange.bind(this)}
