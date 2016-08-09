@@ -1,4 +1,6 @@
 import React from 'react';
+import '../style/todoItem.scss';
+// var css = require("!raw!sass!./css/todoItem.scss");
 
 export default class TodoItem extends React.Component {
 	render() {
@@ -9,8 +11,11 @@ export default class TodoItem extends React.Component {
 		// );
 		// this.props.todoItemkey = this.props.todoItemkey * 3
 		return (
-			<li key={this.props.todoItemkey} id={this.props.id}>
-				{this.props.children}</li>
+			<li className="item_li" key={this.props.todoItemkey} id={this.props.id}>
+				<button className="item_button--check">click to checked</button>
+				&nbsp;{this.props.children}&nbsp;
+				<button className="item_button--delete">click to delete</button>
+			</li>
 		);
 	}
 }

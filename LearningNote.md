@@ -35,5 +35,9 @@ return的內容如果是有用到jsx的語法(例如：<TodoItems />)，
 
 ##20160807
 addTodoForm.jsx現在跟todoList.jsx串在一起了，透過傳props的方式(詳見在todoList.jsx的addItem)，
-將todoList.jsx的handleAddTodoItem函式傳入addTodoForm.jsx，並藉此更新todoList.jsx的state
+將todoList.jsx的handleAddTodoItem函式傳入addTodoForm.jsx，並藉此更新todoList.jsx的state。
 
+##20160809
+import scss檔出現問題"cannot find module scss",將npm install sass-loader --save-dev後已可正常載入。
+用import '../style/XXX.scss';的方式即可，不需要寫成import css from '../style/XXX.scss';。
+將刪除和打勾的button加至todoItem的Component中。
