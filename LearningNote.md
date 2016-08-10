@@ -41,3 +41,8 @@ addTodoForm.jsx現在跟todoList.jsx串在一起了，透過傳props的方式(�
 import scss檔出現問題"cannot find module scss",將npm install sass-loader --save-dev後已可正常載入。
 用import '../style/XXX.scss';的方式即可，不需要寫成import css from '../style/XXX.scss';。
 將刪除和打勾的button加至todoItem的Component中。
+
+##20160810
+將打勾的button功能加至todoItems.jsx及todoItem.jsx，並依照打勾與否顯示不同的click文字。
+將刪除的button功能加至todoList.jsx、todoItems.jsx、todoItem.jsx中，並將該item從todoList的state中刪除。
+為了避免在刪除item之後新增item時，會有id重複造成混淆，現在新增的item的id是取id最大值+1。
