@@ -15,7 +15,7 @@ export default class TodoList extends React.Component {
 
 		// 在ES6中，沒有自動綁定(Autobinding)this的功能，所以必須用bind自己綁定(this)
 		// 而且不建議在render使用該function時再綁定
-		this.handleAddTodoItem = this.handleAddTodoItem.bind(this);
+		// this.handleAddTodoItem = this.handleAddTodoItem.bind(this);
 		this.removeTodoItem = this.removeTodoItem.bind(this);
 	}
     handleAddTodoItem(todoText) {
@@ -31,7 +31,12 @@ export default class TodoList extends React.Component {
 	removeTodoItem(todoId) {
 		var items = this.state.todoItems;
 		var newTodoItems = [];
-		items.filter(function (item) {
+		// 20160813 將filter的寫法改成ES6的寫法
+		// items.filter(function (item) {
+			// if (item.id != todoId)
+				// newTodoItems.push(item);
+		// });
+		items.filter((item) => {
 			if (item.id != todoId)
 				newTodoItems.push(item);
 		});
@@ -44,7 +49,7 @@ export default class TodoList extends React.Component {
 				<h1>我是一個TodoList容器</h1>
 				<h2>我組合了TodoItems以及AddTodoForm兩個元件</h2>
 				<TodoItems items={this.state.todoItems} removeItem={this.removeTodoItem}/>
-				<AddTodoForm addItem={this.handleAddTodoItem}/>
+				<AddTodoForm addItem={this.handleAddTodoItem.bind(this)}/>
 			</div>
 		);
 	}

@@ -26,7 +26,12 @@ export default class AddTodoForm extends React.Component {
     }
     render() {
 		// 如上面所述，在這裡才使用onChange={this.handleTodoChange.bind(this)}
-		// 和onClick={this.handleAddTodoItem.bind(this)}並不是好的寫法
+		// 和onClick={this.handleAddTodoItem.bind(this)}並不是好的寫法，
+		// 因為每次被執行都是返回一個新的函數引用
+		// 20160813更新
+		// bind(this)的寫法也可以用箭頭函數(會綁定當前範圍的this引用)
+		// onChange={this.handleTodoChange.bind(this)}/>
+		// onChange={e=>this.handleTodoChange(e)}/>
         return (
             <div>
                 <input type="text"

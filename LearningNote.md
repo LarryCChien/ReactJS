@@ -46,3 +46,8 @@ import scss檔出現問題"cannot find module scss",將npm install sass-loader -
 將打勾的button功能加至todoItems.jsx及todoItem.jsx，並依照打勾與否顯示不同的click文字。
 將刪除的button功能加至todoList.jsx、todoItems.jsx、todoItem.jsx中，並將該item從todoList的state中刪除。
 為了避免在刪除item之後新增item時，會有id重複造成混淆，現在新增的item的id是取id最大值+1。
+
+##20160813
+閱讀ES5及ES6的寫法對照表
+如果要設定預設屬性及類型，ES5和ES6寫法的差異可以到[寫法對照表](http://bbs.reactnative.cn/topic/15/react-react-native-%E7%9A%84es5-es6%E5%86%99%E6%B3%95%E5%AF%B9%E7%85%A7%E8%A1%A8)搜尋關鍵字"getDefaultProps"。
+關於ES6有一名為[箭頭函數](http://es6.ruanyifeng.com/#docs/function#箭头函数)的用法。並將todoList.jsx裡，removeTodoItem函數裡的items.filter改成箭頭函數的寫法。todoItems.jsx裡的displayItems也改成箭頭函數的寫法。
