@@ -8,8 +8,8 @@ export default class TodoList extends React.Component {
 
 		this.state = {
 			todoItems: 
-                [{ id: 1, data: "Item 01", checked: true },
-                { id: 2, data: "Item 02", checked: false }],
+                [{ id: 1, data: "Item 01", checked: true,itemInputShow: false },
+                { id: 2, data: "Item 02", checked: false,itemInputShow: false }],
 			lastChildId: 2
 		};
 
@@ -24,7 +24,8 @@ export default class TodoList extends React.Component {
         items.push({
             id: lastChildId + 1,
             data: todoText,
-			checked: false
+			checked: false,
+			itemInputShow: false
         });
         this.setState({todoItems: items, lastChildId: lastChildId + 1});
     }
@@ -48,8 +49,8 @@ export default class TodoList extends React.Component {
 			<div className="todoList">
 				<h1>我是一個TodoList容器</h1>
 				<h2>我組合了TodoItems以及AddTodoForm兩個元件</h2>
-				<TodoItems items={this.state.todoItems} removeItem={this.removeTodoItem}/>
 				<AddTodoForm addItem={this.handleAddTodoItem.bind(this)}/>
+				<TodoItems items={this.state.todoItems} removeItem={this.removeTodoItem}/>
 			</div>
 		);
 	}

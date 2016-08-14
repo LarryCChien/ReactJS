@@ -51,3 +51,9 @@ import scss檔出現問題"cannot find module scss",將npm install sass-loader -
 閱讀ES5及ES6的寫法對照表
 如果要設定預設屬性及類型，ES5和ES6寫法的差異可以到[寫法對照表](http://bbs.reactnative.cn/topic/15/react-react-native-%E7%9A%84es5-es6%E5%86%99%E6%B3%95%E5%AF%B9%E7%85%A7%E8%A1%A8)搜尋關鍵字"getDefaultProps"。
 關於ES6有一名為[箭頭函數](http://es6.ruanyifeng.com/#docs/function#箭头函数)的用法。並將todoList.jsx裡，removeTodoItem函數裡的items.filter改成箭頭函數的寫法。todoItems.jsx裡的displayItems也改成箭頭函數的寫法。
+
+##20160814
+將todoItem.scss移除，新增todoItems.scss並於todoItems.jsx中引用，且將該scss檔的class命名符合BEM的命名原則
+[參考資料：BEM思想之徹底弄清BEM語法](http://www.w3cplus.com/css/mindbemding-getting-your-head-round-bem-syntax.html)。
+作業：切換item裡的label和輸入的input(自己練習寫，之後可以參考[react-edit-inline](https://www.npmjs.com/package/react-edit-inline))
+目前問題：1.點擊label之後不能focus input；2.input不能修改。

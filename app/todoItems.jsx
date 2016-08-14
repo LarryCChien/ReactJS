@@ -1,5 +1,7 @@
 import React from 'react';
 import TodoItem from './todoItem.jsx';
+//20160814 因為ul也有css要使用的關係，所以將todoItem.scss刪除，並將其內容移至todoItems.scss
+import '../style/todoItems.scss';
 
 export default class TodoItems extends React.Component {
 	render() {
@@ -13,13 +15,14 @@ export default class TodoItems extends React.Component {
 			// return (<TodoItem key={item.id} todoItem={item} removeItem={removeItem}>
 				// {item.data}</TodoItem>);
 		// });
+		
 		var displayItems = this.props.items.map((item) => (
 			<TodoItem key={item.id} todoItem={item} removeItem={removeItem}>
 				{item.data}</TodoItem>)
 			);
 		return (
 			<div>
-				<ul>
+				<ul className="item__ul">
 					{displayItems}
 				</ul>
 			</div>

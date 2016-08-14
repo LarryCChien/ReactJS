@@ -1,0 +1,51 @@
+.defaultHide {
+	display: none;
+	opacity: 0;
+	pointer-events: none;
+	height: 0;
+}
+.item__ul {
+	padding: 10px 20px;
+	margin: 0;
+}
+/* From todoItem.scss & for todoItem.jsx: */
+.item__li {
+	width: 450px;
+	height: 30px;
+	line-height: 30px;
+	list-style: none;
+	margin-bottom: 5px;
+	
+	& > *:not(.defaultHide) {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+.item__input--checkbox,
+.item__button--delete {
+	cursor: pointer;
+}
+.item__input--checkbox {
+	padding: 0;
+	margin: 0;
+	height: 20px;
+	width: 20px;
+}
+.item__input--text {
+	width: 100px;
+}
+.item__label {
+	text-align: center;
+	width: 100px;
+	cursor: text;
+}
+.item__button--delete {
+	padding: 0;
+	margin: 0;
+	height: 25px;
+	width: 120px;
+}
+/* for addTodoForm.jsx */
+.block__div--addTodo {
+	padding: 20px;
+}

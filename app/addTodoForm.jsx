@@ -33,7 +33,7 @@ export default class AddTodoForm extends React.Component {
 		// onChange={this.handleTodoChange.bind(this)}/>
 		// onChange={e=>this.handleTodoChange(e)}/>
         return (
-            <div>
+            <div className="block__div--addTodo">
                 <input type="text"
                     value={this.state.todoText}
                     onChange={this.handleTodoChange}/>
