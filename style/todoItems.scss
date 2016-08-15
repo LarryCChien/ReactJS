@@ -33,10 +33,13 @@
 }
 .item__input--text {
 	width: 100px;
+	margin: 0 10px;
+	border: 0;
+	text-align: center;
 }
 .item__label {
 	text-align: center;
-	width: 100px;
+	width: 120px;
 	cursor: text;
 }
 .item__button--delete {
@@ -44,6 +47,10 @@
 	margin: 0;
 	height: 25px;
 	width: 120px;
+	
+	&:disabled {
+		cursor: not-allowed;
+	}
 }
 /* for addTodoForm.jsx */
 .block__div--addTodo {

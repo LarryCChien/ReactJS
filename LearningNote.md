@@ -57,3 +57,8 @@ import scss檔出現問題"cannot find module scss",將npm install sass-loader -
 [參考資料：BEM思想之徹底弄清BEM語法](http://www.w3cplus.com/css/mindbemding-getting-your-head-round-bem-syntax.html)。
 作業：切換item裡的label和輸入的input(自己練習寫，之後可以參考[react-edit-inline](https://www.npmjs.com/package/react-edit-inline))
 目前問題：1.點擊label之後不能focus input；2.input不能修改。
+
+##20160815
+20160814的問題解法：1.在label使用htmlFor指至input；2.input的value改為defaultValue。
+在todoItem.jsx的處理函數，不應該在子類別修改，應該要在父類別修改其state，讓react自行逐步往下修改對應的component。
+作業：甚麼是defaultValue
