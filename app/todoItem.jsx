@@ -15,24 +15,16 @@ export default class TodoItem extends React.Component {
 		this.handleRemoveTodoItem = this.handleRemoveTodoItem.bind(this);
 	}
 	handleCheckTodoItem(e) {
-		this.setState({
-			checked: !this.state.checked
-		});
+		this.props.checkItem(this.state.id);
 	}
-	handleItemInputShow() {
-		this.setState({
-			itemInputShow: !this.state.itemInputShow
-		});
+	handleItemInputShow(e) {
+		this.props.showTextInput(this.state.id);
 	}
 	handleEditTodoItem(e) {
-		var inputValue = e.target.value;
-		this.setState({
-			data: inputValue
-		});
-		this.handleItemInputShow();
+		this.props.editItem(this.state.id, e.target.value);
 	}
 	handleRemoveTodoItem(e) {
-		console.log(this.state.id)
+		// console.log(this.state.id)
 		this.props.removeItem(this.state.id);
 	}
 	render() {
