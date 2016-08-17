@@ -62,3 +62,6 @@ import scss檔出現問題"cannot find module scss",將npm install sass-loader -
 20160814的問題解法：1.在label使用htmlFor指至input；2.input的value改為defaultValue。
 在todoItem.jsx的處理函數，不應該在子類別修改，應該要在父類別修改其state，讓react自行逐步往下修改對應的component。
 作業：甚麼是defaultValue
+
+##20160816 & 20160817
+了解Flux是甚麼，試著將Flux的概念加到現行的程式碼中
