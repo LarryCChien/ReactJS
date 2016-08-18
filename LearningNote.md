@@ -65,3 +65,6 @@ import scss檔出現問題"cannot find module scss",將npm install sass-loader -
 
 ##20160816 & 20160817
 了解Flux是甚麼，試著將Flux的概念加到現行的程式碼中
+
+##20160818
+在新增todoList時加上動畫
