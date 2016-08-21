@@ -13,6 +13,7 @@ Practice on ReactJS
 
 3.[ECMAScript 6入门](http://es6.ruanyifeng.com/)
   [React/React Native 的ES5 ES6写法对照表](http://bbs.reactnative.cn/topic/15/react-react-native-%E7%9A%84es5-es6%E5%86%99%E6%B3%95%E5%AF%B9%E7%85%A7%E8%A1%A8)
+  [React ES5、ES6+ 常見用法對照表](https://github.com/kdchang/reactjs101/tree/master/Appendix01)
 
 4.[Reactjs 的 lifecycle « Jame's Blog](http://jamestw.logdown.com/posts/255887-reactjs-lifecycle)
 
