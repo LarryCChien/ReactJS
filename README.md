@@ -40,3 +40,6 @@ Practice on ReactJS
 14.[shiningjason1989/ReactTodosTutorial](https://github.com/shiningjason1989/ReactTodosTutorial)
 
 15.[BEM思想之徹底弄清BEM語法](http://www.w3cplus.com/css/mindbemding-getting-your-head-round-bem-syntax.html)
+
+16.[實作一個Flux Example](https://dotblogs.com.tw/lapland/2015/07/15/151862)
+  [flux 筆記 - 使用 react.js 與計數器範例](https://hungjie19.github.io/hexoblog/2016/06/14/react_flux/)
