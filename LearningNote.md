@@ -68,3 +68,7 @@ import scss檔出現問題"cannot find module scss",將npm install sass-loader -
 
 ##20160818
 作業：在新增todoList時加上動畫
+
+##20160823
+引用flux和object-assign兩個package，其中object-assign是為了要把不同的物件合併在一起(在Store中會用到)。
+關於flux的相關範例，會用到的package有:flux、object-assign、react。

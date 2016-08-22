@@ -15,6 +15,11 @@ var config = {
 			path.resolve(__dirname, 'app/todo.js'),
 			'webpack/hot/dev-server',
 			'webpack-dev-server/client?http://localhost:9527',
+		],
+		todo: [
+			path.resolve(__dirname, 'app/flux_todo.js'),
+			'webpack/hot/dev-server',
+			'webpack-dev-server/client?http://localhost:9527',
 		]
 	},
 	resolve: {
