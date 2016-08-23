@@ -72,3 +72,7 @@ import scss檔出現問題"cannot find module scss",將npm install sass-loader -
 ##20160823
 引用flux和object-assign兩個package，其中object-assign是為了要把不同的物件合併在一起(在Store中會用到)。
 關於flux的相關範例，會用到的package有:flux、object-assign、react。
+
+##20160824
+將[教學](https://dotblogs.com.tw/lapland/2015/07/15/151862)的程式碼轉為ES6寫法加入至專案中，目前app\flux\stores\TodoStore.js和app\flux\dispatcher\AppDispatcher.js轉換會有錯誤，
+例如：Uncaught TypeError: _AppDispatcher2.default.register is not a function

@@ -16,7 +16,7 @@ var config = {
 			'webpack/hot/dev-server',
 			'webpack-dev-server/client?http://localhost:9527',
 		],
-		todo: [
+		flux_todo: [
 			path.resolve(__dirname, 'app/flux_todo.js'),
 			'webpack/hot/dev-server',
 			'webpack-dev-server/client?http://localhost:9527',
