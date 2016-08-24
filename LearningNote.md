@@ -76,3 +76,7 @@ import scss檔出現問題"cannot find module scss",將npm install sass-loader -
 ##20160824
 將[教學](https://dotblogs.com.tw/lapland/2015/07/15/151862)的程式碼轉為ES6寫法加入至專案中，目前app\flux\stores\TodoStore.js和app\flux\dispatcher\AppDispatcher.js轉換會有錯誤，
 例如：Uncaught TypeError: _AppDispatcher2.default.register is not a function
+
+##20160825
+flux的教學&練習暫停，先去了解ES6，不然範例都是用ES5的寫法，要自己學著轉換成ES6目前還有難度。但ES6會是以後的規格，所以先從ES6看起。
+(而且20160824的教學程式碼，直接複製貼上仍有錯"React.findDOMNode is not a function")

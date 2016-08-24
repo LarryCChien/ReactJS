@@ -7,6 +7,6 @@ main();
 function main() {
 	ReactDOM.render(
 	<div>
-		<TodoList />
+		<TodoApp />
 	</div>, document.getElementById('example'));
 }
