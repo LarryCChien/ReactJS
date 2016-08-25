@@ -69,14 +69,20 @@ import scss檔出現問題"cannot find module scss",將npm install sass-loader -
 ##20160818
 作業：在新增todoList時加上動畫
 
-##20160823
+##20160822
 引用flux和object-assign兩個package，其中object-assign是為了要把不同的物件合併在一起(在Store中會用到)。
 關於flux的相關範例，會用到的package有:flux、object-assign、react。
 
-##20160824
+##20160823
 將[教學](https://dotblogs.com.tw/lapland/2015/07/15/151862)的程式碼轉為ES6寫法加入至專案中，目前app\flux\stores\TodoStore.js和app\flux\dispatcher\AppDispatcher.js轉換會有錯誤，
 例如：Uncaught TypeError: _AppDispatcher2.default.register is not a function
 
-##20160825
+##20160824
 flux的教學&練習暫停，先去了解ES6，不然範例都是用ES5的寫法，要自己學著轉換成ES6目前還有難度。但ES6會是以後的規格，所以先從ES6看起。
-(而且20160824的教學程式碼，直接複製貼上仍有錯"React.findDOMNode is not a function")
+(而且`20160823`的教學程式碼，直接複製貼上仍有錯"React.findDOMNode is not a function")
+
+##20160825
+在ES6的Class中，[使用私有方法的方式](http://es6.ruanyifeng.com/#docs/class#私有方法)。
+將flux的教學範例改成用ES6的寫法(但是ES6的文件沒有看完，僅看了Class的一部分)，
+`20160824`的錯誤係由於findDOMNode該function已經移至React-dom裡，所以多引用該檔案即可正常運作。
+目前教學範例中的TodoStore及TodoAction引用感覺不太正確(因為用到了prototype來使用該Class內的function)，需要再看一下是不是應該改用其他的方式。
