@@ -15,13 +15,11 @@ export default class TodoApp extends React.Component {
 		this.state = {
 			todoItems: TodoStore.prototype.getTodoItems()
 		};
-		
 		this.componentDidMount = this.componentDidMount.bind(this);
 		this.componentWillUnmount = this.componentWillUnmount.bind(this);
 		this.changeHandler = this.changeHandler.bind(this);
 		this.handleAddTodo = this.handleAddTodo.bind(this);
 	}
-	
 	componentDidMount() {
 		TodoStore.prototype.addChangeListener(this.changeHandler);
 	}

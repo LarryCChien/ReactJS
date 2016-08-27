@@ -9,9 +9,9 @@ import {EventEmitter} from 'events';
 var CHANGE_EVENT = 'change';
 var todoItems = ["Do something"];
  
-function createTodo(inTodoText){
-	todoItems = todoItems.concat(inTodoText);
-}
+var createTodo = (inTodoText) => (
+	todoItems = todoItems.concat(inTodoText)
+)
 
 export default class TodoStore {
 	constructor() {
