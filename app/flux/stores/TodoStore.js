@@ -7,7 +7,7 @@ import {EventEmitter} from 'events';
 // var assign = require("object-assign");
 
 var CHANGE_EVENT = 'change';
-var todoItems = ["Do something"];
+var todoItems = ["Do something", "Say something"];
  
 var createTodo = (inTodoText) => (
 	todoItems = todoItems.concat(inTodoText)
@@ -55,7 +55,7 @@ Object.assign(TodoStore.prototype, EventEmitter.prototype);
 AppDispatcher.register((action) => {
 	switch(action.actionType){
 		case "CreateTodo":
-			createTodo(action.text);
+			createTodo(action.text); // 呼叫TodoStore的內部函式
 			TodoStore.prototype.emitChange();
 			break;
 		

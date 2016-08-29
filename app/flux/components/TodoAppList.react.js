@@ -7,7 +7,16 @@ export default class Todolist extends React.Component {
 	}
 	render() {
 		var itemElement = (inTodoText,index) => (
-			<li key={index}>{inTodoText}</li>
+			<li className="item__li" key={index}>
+				<input type="checkbox" name="itemCheckbox" id={"input_" + index}
+					className="item__input--checkbox" />&nbsp;
+				<label  className="item__label" htmlFor={"input_" + index} >
+					{inTodoText}
+				</label>&nbsp;
+				<button className="item__button--delete">
+					{"點擊刪除"}
+				</button>
+			</li>
 		);
 		
 		return(

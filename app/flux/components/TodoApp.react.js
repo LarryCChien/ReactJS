@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import TodoAppList from './TodoAppList.react';
 import TodoStore from '../stores/TodoStore';
 import TodoAction from '../actions/TodoAction';
+import '../../../style/todoItems.scss';
 // var React = require("react");
 // var TodoAppList = require("./TodoAppList.react");
 // var TodoStore = require("../stores/TodoStore");

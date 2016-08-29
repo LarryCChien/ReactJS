@@ -9,7 +9,7 @@ export default class TodoAction {
 	}
 	createTodo(inTodoText) {
 		AppDispatcher.dispatch({
-			actionType: "CreateTodo",
+			actionType: "CreateTodo", //呼叫在TodoStore註冊(register)好的函式
 			text: inTodoText
 		});
 	}
