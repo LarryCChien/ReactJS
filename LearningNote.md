@@ -91,3 +91,6 @@ flux的教學&練習暫停，先去了解ES6，不然範例都是用ES5的寫法
 承`20160825`，用prototype是目前唯一解。若使用var TodoStore = new TodoStore()的方式，
 可以將prototype的字眼移除，但在觸發TodoStore.emitChange()時會沒辦法正常觸發
 (原本是return true，改用var的話會變成return false)
+
+##20160829
+Github和Trello在編寫文字的時候有參考[Markdown](http://markdown.tw/)的格式，所以在寫的時候有些標記方式是可以互通的。
