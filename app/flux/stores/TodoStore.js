@@ -6,10 +6,11 @@ import {EventEmitter} from 'events';
 // var EventEmitter = require("events").EventEmitter;
 // var assign = require("object-assign");
 
-var CHANGE_EVENT = 'change';
-var todoItems = ["Do something", "Say something"];
+const CHANGE_EVENT = 'change';
+//這裡不能用const宣告todoItems，如果用const的話，todoItems是不能修改的。
+let todoItems = ["Do something", "Say something"];
  
-var createTodo = (inTodoText) => (
+const createTodo = (inTodoText) => (
 	todoItems = todoItems.concat(inTodoText)
 )
 
@@ -63,4 +64,4 @@ AppDispatcher.register((action) => {
 	}
 });
 
-module.exports = TodoStore;
+// module.exports = TodoStore;

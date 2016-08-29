@@ -6,7 +6,7 @@ export default class Todolist extends React.Component {
 		super(props);
 	}
 	render() {
-		var itemElement = (inTodoText,index) => (
+		let itemElement = (inTodoText,index) => (
 			<li className="item__li" key={index}>
 				<input type="checkbox" name="itemCheckbox" id={"input_" + index}
 					className="item__input--checkbox" />&nbsp;

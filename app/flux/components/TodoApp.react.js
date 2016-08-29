@@ -31,7 +31,7 @@ export default class TodoApp extends React.Component {
 		this.setState({todoItems:TodoStore.prototype.getTodoItems()});
 	}
 	handleAddTodo() {
-		var newTodo = ReactDOM.findDOMNode(this.refs.txtTodo).value.trim();
+		let newTodo = ReactDOM.findDOMNode(this.refs.txtTodo).value.trim();
 		TodoAction.prototype.createTodo(newTodo);
 		ReactDOM.findDOMNode(this.refs.txtTodo).value = '';
 	}
