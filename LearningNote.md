@@ -1,5 +1,3 @@
-#2016年8月#
-
 ##20160802
 webpack.config.js有傳入多個entry,有參考網路上的multiple entries
 目的是把練習的index.html及main.js的相關檔案與要做todoList的檔案分開，
