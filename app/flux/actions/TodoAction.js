@@ -6,11 +6,19 @@ export default class TodoAction {
 		// super(props);
 		
 		this.createTodo = this.createTodo.bind(this);
+		this.changeTodoChecked = this.changeTodoChecked.bind(this);
 	}
 	createTodo(inTodoText) {
 		AppDispatcher.dispatch({
 			actionType: "CreateTodo", //呼叫在TodoStore註冊(register)好的函式
 			text: inTodoText
+		});
+	}
+	changeTodoChecked(itemId) {
+		// console.log(itemId)
+		AppDispatcher.dispatch({
+			actionType: "ChangeTodoChecked", //呼叫在TodoStore註冊(register)好的函式
+			id: itemId
 		});
 	}
 }

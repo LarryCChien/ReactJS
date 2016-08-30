@@ -8,10 +8,36 @@ import {EventEmitter} from 'events';
 
 const CHANGE_EVENT = 'change';
 //這裡不能用const宣告todoItems，如果用const的話，todoItems是不能修改的。
-let todoItems = ["Do something", "Say something"];
+// let todoItems = ["Do something", "Say something"];
+let todoItems = [{
+		id: 1,
+		text: "Do something",
+		checked: true,
+	},{
+		id: 2,
+		text: "Say something",
+		checked: false,
+	}];
+let lastItemId = 3;
  
 const createTodo = (inTodoText) => (
-	todoItems = todoItems.concat(inTodoText)
+	// todoItems = todoItems.concat(inTodoText)
+	todoItems.push({
+		id: lastItemId++,
+		text: inTodoText,
+		checked: false,
+	})
+)
+const changeCheckListener = (todoItemId) => (
+	// let items = todoItems;
+	// let newTodoItems = [];
+	// items.filter((item) => {
+		// if (item.id == todoItemId)
+			// item.checked = !item.checked;
+		// newTodoItems.push(item);
+	// });
+	// todoItems = newTodoItems;
+	""
 )
 
 export default class TodoStore {
@@ -21,6 +47,7 @@ export default class TodoStore {
 		this.emitChange = this.emitChange.bind(this);
 		this.addChangeListener = this.addChangeListener.bind(this);
 		this.removeChangeListener = this.removeChangeListener.bind(this);
+		// this.changeCheckListener = this.changeCheckListener.bind(this);
 	}
 	getTodoItems() {
 		return todoItems;
@@ -57,6 +84,10 @@ AppDispatcher.register((action) => {
 	switch(action.actionType){
 		case "CreateTodo":
 			createTodo(action.text); // 呼叫TodoStore的內部函式
+			TodoStore.prototype.emitChange();
+			break;
+		case "ChangeTodoChecked":
+			changeCheckListener(action.id); // 呼叫TodoStore的內部函式
 			TodoStore.prototype.emitChange();
 			break;
 		

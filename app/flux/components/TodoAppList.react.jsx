@@ -1,27 +1,25 @@
 import React from 'react';
+import TodoAppItem from './TodoAppItem.jsx';
 // var React = require("react");
 
 export default class Todolist extends React.Component {
 	constructor(props) {
 		super(props);
+		
+		this.handleCheckTodo = this.handleCheckTodo.bind(this);
+	}
+	handleCheckTodo(todoItemId) {
+		console.log("todoAppList:" + todoItemId);
+		this.props.check(todoItemId);
 	}
 	render() {
-		let itemElement = (inTodoText,index) => (
-			<li className="item__li" key={index}>
-				<input type="checkbox" name="itemCheckbox" id={"input_" + index}
-					className="item__input--checkbox" />&nbsp;
-				<label  className="item__label" htmlFor={"input_" + index} >
-					{inTodoText}
-				</label>&nbsp;
-				<button className="item__button--delete">
-					{"點擊刪除"}
-				</button>
-			</li>
-		);
+		let handleCheckTodo = this.handleCheckTodo;
 		
 		return(
 			<ul>
-				{this.props.Items.map(itemElement)}
+				{this.props.Items.map((inTodoObj) => (
+					<TodoAppItem item={inTodoObj} handleCheckTodo={handleCheckTodo} />)
+				)}
 			</ul>
 		);
 	}

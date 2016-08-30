@@ -97,3 +97,7 @@ Github和Trello在編寫文字的時候有參考[Markdown](http://markdown.tw/)�
 在ES6的規格中，因為var會將該變數的層級拉到最上層(例如在var一個變數AA之前，AA是undefined；但是用let則會說此為錯誤)，並不符合變數「先宣告後使用」的原則，所以用let替代var，而全域常數則用const替代var。
 此外全域常數用const還可以讓閱讀程式碼的人第一眼就知道其為「常數」，進而意會到不應該修改其值。[參考資料](http://es6.ruanyifeng.com/#docs/style#块级作用域)
 將flux的範例檔中所有的var改為應對的const跟let。
+
+##20160830
+將checkbox打勾與否的功能新增至flux的範例檔，但增加該部分的程式碼之後，在初始化以及新增item時，均會觸發修改check的函式，且會在新增時造成無窮迴圈。
+作業：為什麼在初始化以及新增item時會觸發修改各item的checked屬性的function

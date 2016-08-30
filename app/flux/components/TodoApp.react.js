@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TodoAppList from './TodoAppList.react';
+import TodoAppList from './TodoAppList.react.jsx';
 import TodoStore from '../stores/TodoStore';
 import TodoAction from '../actions/TodoAction';
 import '../../../style/todoItems.scss';
@@ -20,6 +20,7 @@ export default class TodoApp extends React.Component {
 		this.componentWillUnmount = this.componentWillUnmount.bind(this);
 		this.changeHandler = this.changeHandler.bind(this);
 		this.handleAddTodo = this.handleAddTodo.bind(this);
+		this.handleCheckTodo = this.handleCheckTodo.bind(this);
 	}
 	componentDidMount() {
 		TodoStore.prototype.addChangeListener(this.changeHandler);
@@ -35,13 +36,18 @@ export default class TodoApp extends React.Component {
 		TodoAction.prototype.createTodo(newTodo);
 		ReactDOM.findDOMNode(this.refs.txtTodo).value = '';
 	}
+	handleCheckTodo(itemId) {
+		// TodoAction.prototype.changeTodoChecked(itemId);
+		console.log(itemId)
+	}
 	render() {
 		return(
 			<div>
 				<h1>Todo</h1>
 				<input type='text' ref='txtTodo'/>
 				<button onClick={this.handleAddTodo}>Add</button>
-				<TodoAppList Items={this.state.todoItems}/>
+				<TodoAppList Items={this.state.todoItems} 
+					check={this.handleCheckTodo}/>
 			</div>
 		);
 	}
