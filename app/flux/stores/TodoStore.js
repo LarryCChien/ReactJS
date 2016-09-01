@@ -20,25 +20,32 @@ let todoItems = [{
 	}];
 let lastItemId = 3;
  
-const createTodo = (inTodoText) => (
-	// todoItems = todoItems.concat(inTodoText)
+const createTodo = (inTodoText) => {
 	todoItems.push({
 		id: lastItemId++,
 		text: inTodoText,
 		checked: false,
 	})
-)
-const changeCheckListener = (todoItemId) => (
-	// let items = todoItems;
-	// let newTodoItems = [];
-	// items.filter((item) => {
-		// if (item.id == todoItemId)
-			// item.checked = !item.checked;
-		// newTodoItems.push(item);
-	// });
-	// todoItems = newTodoItems;
-	""
-)
+}
+const changeTodoChecked = (todoItemId) => {
+	let items = todoItems;
+	let newTodoItems = [];
+	items.filter((item) => {
+		if (item.id == todoItemId)
+			item.checked = !item.checked;
+		newTodoItems.push(item);
+	});
+	todoItems = newTodoItems;
+}
+const removeTodo = (todoItemId) => {
+	let items = todoItems;
+	let newTodoItems = [];
+	items.filter((item) => {
+		if (item.id != todoItemId)
+			newTodoItems.push(item);
+	});
+	todoItems = newTodoItems;
+}
 
 export default class TodoStore {
 	constructor() {
@@ -47,7 +54,6 @@ export default class TodoStore {
 		this.emitChange = this.emitChange.bind(this);
 		this.addChangeListener = this.addChangeListener.bind(this);
 		this.removeChangeListener = this.removeChangeListener.bind(this);
-		// this.changeCheckListener = this.changeCheckListener.bind(this);
 	}
 	getTodoItems() {
 		return todoItems;
@@ -87,7 +93,11 @@ AppDispatcher.register((action) => {
 			TodoStore.prototype.emitChange();
 			break;
 		case "ChangeTodoChecked":
-			changeCheckListener(action.id); // 呼叫TodoStore的內部函式
+			changeTodoChecked(action.id); // 呼叫TodoStore的內部函式
+			TodoStore.prototype.emitChange();
+			break;
+		case "RemoveTodo":
+			removeTodo(action.id); // 呼叫TodoStore的內部函式
 			TodoStore.prototype.emitChange();
 			break;
 		

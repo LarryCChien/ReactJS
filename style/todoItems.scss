@@ -8,6 +8,9 @@
 	padding: 10px 20px;
 	margin: 0;
 }
+.delete_line {
+	text-decoration: line-through;
+}
 /* From todoItem.scss & for todoItem.jsx: */
 .item__li {
 	width: 450px;

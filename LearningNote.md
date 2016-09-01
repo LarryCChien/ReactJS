@@ -101,3 +101,6 @@ Github和Trello在編寫文字的時候有參考[Markdown](http://markdown.tw/)�
 ##20160830
 將checkbox打勾與否的功能新增至flux的範例檔，但增加該部分的程式碼之後，在初始化以及新增item時，均會觸發修改check的函式，且會在新增時造成無窮迴圈。
 作業：為什麼在初始化以及新增item時會觸發修改各item的checked屬性的function
+
+##20160901
+造成`20160830`無窮迴圈的原因是：TodoAppItem.jsx裡的`onClick={this.handleCheckTodo(this.props.item.id)}`應該改為`onClick={this.handleCheckTodo}`，這樣才不會在render時就將id傳入並執行該函式。

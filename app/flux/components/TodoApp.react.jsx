@@ -21,6 +21,7 @@ export default class TodoApp extends React.Component {
 		this.changeHandler = this.changeHandler.bind(this);
 		this.handleAddTodo = this.handleAddTodo.bind(this);
 		this.handleCheckTodo = this.handleCheckTodo.bind(this);
+		this.handleRemoveTodo = this.handleRemoveTodo.bind(this);
 	}
 	componentDidMount() {
 		TodoStore.prototype.addChangeListener(this.changeHandler);
@@ -37,8 +38,10 @@ export default class TodoApp extends React.Component {
 		ReactDOM.findDOMNode(this.refs.txtTodo).value = '';
 	}
 	handleCheckTodo(itemId) {
-		// TodoAction.prototype.changeTodoChecked(itemId);
-		console.log(itemId)
+		TodoAction.prototype.changeTodoChecked(itemId);
+	}
+	handleRemoveTodo(itemId) {
+		TodoAction.prototype.removeTodo(itemId);
 	}
 	render() {
 		return(
@@ -47,7 +50,7 @@ export default class TodoApp extends React.Component {
 				<input type='text' ref='txtTodo'/>
 				<button onClick={this.handleAddTodo}>Add</button>
 				<TodoAppList Items={this.state.todoItems} 
-					check={this.handleCheckTodo}/>
+					check={this.handleCheckTodo} remove={this.handleRemoveTodo}/>
 			</div>
 		);
 	}

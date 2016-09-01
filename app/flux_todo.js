@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TodoApp from './flux/components/TodoApp.react';
+import TodoApp from './flux/components/TodoApp.react.jsx';
 
 main();
 

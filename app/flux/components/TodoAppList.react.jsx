@@ -7,18 +7,23 @@ export default class Todolist extends React.Component {
 		super(props);
 		
 		this.handleCheckTodo = this.handleCheckTodo.bind(this);
+		this.handleRemoveTodo = this.handleRemoveTodo.bind(this);
 	}
 	handleCheckTodo(todoItemId) {
-		console.log("todoAppList:" + todoItemId);
 		this.props.check(todoItemId);
 	}
+	handleRemoveTodo(todoItemId) {
+		this.props.remove(todoItemId);
+	}
 	render() {
-		let handleCheckTodo = this.handleCheckTodo;
+		let CheckTodo = this.handleCheckTodo;
+		let RemoveTodo = this.handleRemoveTodo;
 		
 		return(
 			<ul>
 				{this.props.Items.map((inTodoObj) => (
-					<TodoAppItem item={inTodoObj} handleCheckTodo={handleCheckTodo} />)
+					<TodoAppItem item={inTodoObj} handleCheckTodo={CheckTodo} 
+						handleRemoveTodo={RemoveTodo} />)
 				)}
 			</ul>
 		);
