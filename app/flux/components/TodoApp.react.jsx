@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TodoAppList from './TodoAppList.react.jsx';
+import TodoAppLength from './TodoAppLength.jsx';
 import TodoStore from '../stores/TodoStore';
 import TodoAction from '../actions/TodoAction';
 import '../../../style/todoItems.scss';
@@ -14,7 +15,8 @@ export default class TodoApp extends React.Component {
 		super(props);
 
 		this.state = {
-			todoItems: TodoStore.prototype.getTodoItems()
+			todoItems: TodoStore.prototype.getTodoItems(),
+			todoItemLength: TodoStore.prototype.getTodoLength()
 		};
 		this.componentDidMount = this.componentDidMount.bind(this);
 		this.componentWillUnmount = this.componentWillUnmount.bind(this);
@@ -30,7 +32,10 @@ export default class TodoApp extends React.Component {
 		TodoStore.prototype.removeChangerListener(this.changeHandler);
 	}
 	changeHandler() {
-		this.setState({todoItems:TodoStore.prototype.getTodoItems()});
+		this.setState({
+			todoItems:TodoStore.prototype.getTodoItems(),
+			todoItemLength:TodoStore.prototype.getTodoLength()
+		});
 	}
 	handleAddTodo() {
 		let newTodo = ReactDOM.findDOMNode(this.refs.txtTodo).value.trim();
@@ -51,6 +56,7 @@ export default class TodoApp extends React.Component {
 				<button onClick={this.handleAddTodo}>Add</button>
 				<TodoAppList Items={this.state.todoItems} 
 					check={this.handleCheckTodo} remove={this.handleRemoveTodo}/>
+				<TodoAppLength itemLength={this.state.todoItemLength} />
 			</div>
 		);
 	}

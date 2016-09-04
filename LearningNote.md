@@ -104,3 +104,6 @@ Github和Trello在編寫文字的時候有參考[Markdown](http://markdown.tw/)�
 
 ##20160901
 造成`20160830`無窮迴圈的原因是：TodoAppItem.jsx裡的`onClick={this.handleCheckTodo(this.props.item.id)}`應該改為`onClick={this.handleCheckTodo}`，這樣才不會在render時就將id傳入並執行該函式。
+
+##20160904
+將todoItems、已完成、未完成的todoItem的數量顯示在flux_todo中。

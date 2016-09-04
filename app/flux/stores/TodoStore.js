@@ -6,6 +6,7 @@ import {EventEmitter} from 'events';
 // var EventEmitter = require("events").EventEmitter;
 // var assign = require("object-assign");
 
+/* data area start */
 const CHANGE_EVENT = 'change';
 //這裡不能用const宣告todoItems，如果用const的話，todoItems是不能修改的。
 // let todoItems = ["Do something", "Say something"];
@@ -19,6 +20,11 @@ let todoItems = [{
 		checked: false,
 	}];
 let lastItemId = 3;
+let todoItemLength = 2;
+let todoItemCheckedLength = 1;
+let todoItemUncheckedLength = 1;
+
+/* data area end */
  
 const createTodo = (inTodoText) => {
 	todoItems.push({
@@ -26,13 +32,23 @@ const createTodo = (inTodoText) => {
 		text: inTodoText,
 		checked: false,
 	})
+	todoItemLength++;
+	todoItemUncheckedLength++;
 }
 const changeTodoChecked = (todoItemId) => {
 	let items = todoItems;
 	let newTodoItems = [];
 	items.filter((item) => {
-		if (item.id == todoItemId)
+		if (item.id == todoItemId) {
+			if (item.checked) {
+				todoItemUncheckedLength++;
+				todoItemCheckedLength--;
+			} else {
+				todoItemUncheckedLength--;
+				todoItemCheckedLength++;
+			}
 			item.checked = !item.checked;
+		}
 		newTodoItems.push(item);
 	});
 	todoItems = newTodoItems;
@@ -41,8 +57,16 @@ const removeTodo = (todoItemId) => {
 	let items = todoItems;
 	let newTodoItems = [];
 	items.filter((item) => {
-		if (item.id != todoItemId)
+		if (item.id != todoItemId) {
 			newTodoItems.push(item);
+		} else {
+			todoItemLength--;
+			if (item.checked) {
+				todoItemCheckedLength--;
+			} else {
+				todoItemUncheckedLength--;
+			}
+		}
 	});
 	todoItems = newTodoItems;
 }
@@ -51,12 +75,21 @@ export default class TodoStore {
 	constructor() {
 		
 		this.getTodoItems = this.getTodoItems.bind(this);
+		this.getTodoLength = this.getTodoLength.bind(this);
 		this.emitChange = this.emitChange.bind(this);
 		this.addChangeListener = this.addChangeListener.bind(this);
 		this.removeChangeListener = this.removeChangeListener.bind(this);
 	}
 	getTodoItems() {
 		return todoItems;
+	}
+	getTodoLength() {
+		
+		return {
+			todoItemLength: todoItemLength,
+			todoItemCheckedLength: todoItemCheckedLength,
+			todoItemUncheckedLength: todoItemUncheckedLength,
+		};
 	}
 	emitChange() {
 		this.emit(CHANGE_EVENT);
