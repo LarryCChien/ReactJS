@@ -71,7 +71,7 @@ const removeTodo = (todoItemId) => {
 	todoItems = newTodoItems;
 }
 
-export default class TodoStore {
+class _TodoStore {
 	constructor() {
 		
 		this.getTodoItems = this.getTodoItems.bind(this);
@@ -102,7 +102,7 @@ export default class TodoStore {
 	}
 }
 
-Object.assign(TodoStore.prototype, EventEmitter.prototype);
+Object.assign(_TodoStore.prototype, EventEmitter.prototype);
 
 // var TodoStore = assign({},EventEmitter.prototype,{
 	// getTodoItems: function(){
@@ -123,19 +123,22 @@ AppDispatcher.register((action) => {
 	switch(action.actionType){
 		case "CreateTodo":
 			createTodo(action.text); // 呼叫TodoStore的內部函式
-			TodoStore.prototype.emitChange();
+			TodoStore.emitChange();
 			break;
 		case "ChangeTodoChecked":
 			changeTodoChecked(action.id); // 呼叫TodoStore的內部函式
-			TodoStore.prototype.emitChange();
+			TodoStore.emitChange();
 			break;
 		case "RemoveTodo":
 			removeTodo(action.id); // 呼叫TodoStore的內部函式
-			TodoStore.prototype.emitChange();
+			TodoStore.emitChange();
 			break;
 		
 		default:
 	}
 });
+
+let TodoStore = new _TodoStore();
+export default TodoStore
 
 // module.exports = TodoStore;

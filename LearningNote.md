@@ -107,3 +107,6 @@ Github和Trello在編寫文字的時候有參考[Markdown](http://markdown.tw/)�
 
 ##20160904
 將todoItems、已完成、未完成的todoItem的數量顯示在flux_todo中。
+
+##20160906
+修改`20160825`遇到的prototype的錯誤，現在在TodoStore.js、TodoAction.js中，export default的是new過的變數，而非原本的class。相關關鍵字：`singleton`。

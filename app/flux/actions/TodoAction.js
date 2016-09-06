@@ -1,7 +1,7 @@
 import AppDispatcher from '../dispatcher/AppDispatcher';
 // var AppDispatcher = require("../dispatcher/AppDispatcher");
 
-export default class TodoAction {
+class _TodoAction {
 	constructor(props) {
 		// super(props);
 		
@@ -28,6 +28,9 @@ export default class TodoAction {
 		});
 	}
 }
+
+let TodoAction = new _TodoAction();
+export default TodoAction
 // var TodoAction = {
 	// createTodo: function(inTodoText){
 		// AppDispatcher.dispatch({

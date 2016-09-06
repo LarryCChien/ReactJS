@@ -15,8 +15,8 @@ export default class TodoApp extends React.Component {
 		super(props);
 
 		this.state = {
-			todoItems: TodoStore.prototype.getTodoItems(),
-			todoItemLength: TodoStore.prototype.getTodoLength()
+			todoItems: TodoStore.getTodoItems(),
+			todoItemLength: TodoStore.getTodoLength()
 		};
 		this.componentDidMount = this.componentDidMount.bind(this);
 		this.componentWillUnmount = this.componentWillUnmount.bind(this);
@@ -26,27 +26,27 @@ export default class TodoApp extends React.Component {
 		this.handleRemoveTodo = this.handleRemoveTodo.bind(this);
 	}
 	componentDidMount() {
-		TodoStore.prototype.addChangeListener(this.changeHandler);
+		TodoStore.addChangeListener(this.changeHandler);
 	}
 	componentWillUnmount() {
-		TodoStore.prototype.removeChangerListener(this.changeHandler);
+		TodoStore.removeChangerListener(this.changeHandler);
 	}
 	changeHandler() {
 		this.setState({
-			todoItems:TodoStore.prototype.getTodoItems(),
-			todoItemLength:TodoStore.prototype.getTodoLength()
+			todoItems:TodoStore.getTodoItems(),
+			todoItemLength:TodoStore.getTodoLength()
 		});
 	}
 	handleAddTodo() {
 		let newTodo = ReactDOM.findDOMNode(this.refs.txtTodo).value.trim();
-		TodoAction.prototype.createTodo(newTodo);
+		TodoAction.createTodo(newTodo);
 		ReactDOM.findDOMNode(this.refs.txtTodo).value = '';
 	}
 	handleCheckTodo(itemId) {
-		TodoAction.prototype.changeTodoChecked(itemId);
+		TodoAction.changeTodoChecked(itemId);
 	}
 	handleRemoveTodo(itemId) {
-		TodoAction.prototype.removeTodo(itemId);
+		TodoAction.removeTodo(itemId);
 	}
 	render() {
 		return(
