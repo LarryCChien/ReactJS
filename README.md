@@ -47,3 +47,5 @@ Practice on ReactJS
 17.[(翻譯)React 最佳實踐與實用函式](http://logme.logdown.com/posts/813688/translation-react-best-practices-and-useful-function)
 
 18.[從零開始學 ReactJS（ReactJS 101）](https://github.com/kdchang/reactjs101?utm_content=buffer5e7f1&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
+
+19.[babel 相關名詞簡介](http://code.kpman.cc/2016/09/13/babel-%E7%9B%B8%E9%97%9C%E5%90%8D%E8%A9%9E%E7%B0%A1%E4%BB%8B/)
