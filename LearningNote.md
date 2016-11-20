@@ -110,3 +110,6 @@ Github和Trello在編寫文字的時候有參考[Markdown](http://markdown.tw/)�
 
 ##20160906
 修改`20160825`遇到的prototype的錯誤，現在在TodoStore.js、TodoAction.js中，export default的是new過的變數，而非原本的class。相關關鍵字：`singleton`。
+
+##20161120
+[ONE-WAY DATA FLOW、TWO-WAY DATA BINDING 與前端框架](http://blog.turn.tw/?p=2948)、[选择 React 是商业问题而不是技术问题](http://www.zcfy.cc/article/using-react-is-a-business-decision-not-a-technology-choice-1059.html)
