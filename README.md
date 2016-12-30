@@ -51,3 +51,5 @@ Practice on ReactJS
 19.[babel 相關名詞簡介](http://code.kpman.cc/2016/09/13/babel-%E7%9B%B8%E9%97%9C%E5%90%8D%E8%A9%9E%E7%B0%A1%E4%BB%8B/)
 
 20.[Airbnb的Javascript Style Guide](https://github.com/airbnb/javascript)
+
+21.[英國打工度假](https://www.slideshare.net/secret/omRVEu4Nnuc1y2)
