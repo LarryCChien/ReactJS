@@ -20,6 +20,11 @@ var config = {
 			path.resolve(__dirname, 'app/flux_todo.js'),
 			'webpack/hot/dev-server',
 			'webpack-dev-server/client?http://localhost:9527',
+		],
+		redux_todo: [
+			path.resolve(__dirname, 'app/redux_todo.js'),
+			'webpack/hot/dev-server',
+			'webpack-dev-server/client?http://localhost:9527',
 		]
 	},
 	resolve: {
