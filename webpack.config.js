@@ -52,7 +52,7 @@ var config = {
 			test: /\.(png|jpg)$/,
 			loader: 'url?limit=25000' //25kb以下的圖檔會轉成base64,大於的則會透過file-loader這個package載入
 		}],
-		noParse: [pathToReact]
+		noParse: [pathToReact,pathToReactDOM]
 	}
 };
 
