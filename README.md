@@ -52,4 +52,3 @@ Practice on ReactJS
 
 20.[Airbnb的Javascript Style Guide](https://github.com/airbnb/javascript)
 
-21.[英國打工度假](https://www.slideshare.net/secret/omRVEu4Nnuc1y2)
