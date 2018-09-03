@@ -1,5 +1,5 @@
 {
-  "name": "EggheadChien.ReactJS.package",
+  "name": "LarryCChien.ReactJS.package",
   "version": "1.0.0",
   "description": "Practice on ReactJS. This is a file after type 'npm init'.",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://EggheadChien@github.com/EggheadChien/ReactJS.git"
+    "url": "git+https://LarryCChien@github.com/LarryCChien/ReactJS.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/EggheadChien/ReactJS/issues"
+    "url": "https://github.com/LarryCChien/ReactJS/issues"
   },
-  "homepage": "https://github.com/EggheadChien/ReactJS#readme",
+  "homepage": "https://github.com/LarryCChien/ReactJS#readme",
   "devDependencies": {
     "babel-core": "^6.11.4",
     "babel-loader": "^6.2.4",
