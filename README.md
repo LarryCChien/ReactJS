@@ -2,7 +2,7 @@
 Practice on ReactJS
 
 ## 學習筆記：
-見 [LearningNote.md](https://github.com/EggheadChien/ReactJS/blob/master/LearningNote.md)
+見 [LearningNote.md](https://github.com/LarryCChien/ReactJS/blob/master/LearningNote.md)
 
 
 ## 參考網站／影片：
